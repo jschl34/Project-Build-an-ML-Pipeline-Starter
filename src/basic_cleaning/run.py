@@ -30,8 +30,8 @@ def go(args):
     # EDA with arguments passed into the step
     logger.info('Cleaning data.')
     idx = df['price'].between(float(args.min_price), float(args.max_price))
-    df = df[idx].copy()
     df['last_review'] = pd.to_datetime(df['last_review'])
+    df = df[idx].copy()
     # TODO: add code to fix the issue happened when testing the model
     
 
