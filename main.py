@@ -83,9 +83,9 @@ def go(config: DictConfig):
                 'main',
                 parameters = {
                         "input": "clean_sample.csv:latest",
-                        "test_size": config["modeling"]["test_size"],
-                        "random_seed": config["modeling"]["random_seed"],
-                        "stratify_by": config["modeling"]["stratify_by"]
+                        "test_size": config['modeling']['test_size'],
+                        "random_seed": config['modeling']['random_seed'],
+                        "stratify_by": config['modeling']['stratify_by']
                 },
             )
 
@@ -105,10 +105,10 @@ def go(config: DictConfig):
                     "trainval_artifact": "trainval_data.csv:lastest",
                     "output_artifact": "random_forest_export",
                     "rf_config": rf_config,
-                    "val_size": config["modeling"]["val_size"],
-                    "random_seed": config["modeling"]["random_seed"],
-                    "stratify_by": config["modeling"]["stratify_by"],
-                    "max_tfidf_feature": config["modeling"]["max_tfidf_feature"]
+                    "val_size": config['modeling']['val_size'],
+                    "random_seed": config['modeling']['random_seed'],
+                    "stratify_by": config['modeling']['stratify_by'],
+                    "max_tfidf_features": config['modeling']['max_tfidf_features']
                 },
             )
 
