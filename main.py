@@ -102,7 +102,7 @@ def go(config: DictConfig):
                 os.path.join(hydra.utils.get_original_cwd(), "src", "train_random_forest"),
                 "main",
                 parameters={
-                    "trainval_artifact": "trainval_data.csv:lastest",
+                    "trainval_artifact": "trainval_data.csv:latest",
                     "output_artifact": "random_forest_export",
                     "rf_config": rf_config,
                     "val_size": config['modeling']['val_size'],
